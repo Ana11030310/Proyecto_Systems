@@ -1,2 +1,2 @@
-# Proyecto_Systems
-Proyecto trimestre 2 
+# Cavak_Systems
+Proyecto Joyas Kogi
