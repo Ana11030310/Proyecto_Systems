@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="css/Profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Personaliza.css">
+    <link rel="stylesheet" href="css/citaP.css">
+    <link rel="stylesheet" href="css/perdit.css">
+    <link rel="stylesheet" href="css/calender.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Joyas Kogi</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/Logo.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Joyas Kogi</span>
+                    <span class="profession">Naturaleza y joyas</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Buscar...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#compras">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Historial de compras</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#coments">
+                            <i class='bx bx-detail icon' ></i>
+                            <span class="text nav-text">Historial de comentarios</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#garantias">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Calendario de garantias</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#joya">
+                            <i class='bx bx-edit-alt icon' ></i>
+                            <span class="text nav-text">Personaliza tu joya</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#cita">
+                            <i class='bx bx-calendar-plus icon' ></i>
+                            <span class="text nav-text">Agenda tu cita</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#profil">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Editar Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Sesión.html" id="VerAlerta">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">cerrar sesión</span>
+                    </a>
+                    <script> 
+                        window.addEventListener("load", function() { 
+                          document.getElementById("VerAlerta").addEventListener("click",function (){
+      
+                      alert('Se ha cerrado sesión correctamente!');  })
+                      
+                      }) 
+                      </script>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo oscuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+       
+     <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+          <!--<i class="bx bx-menu" id="sidebarOpen"></i>
+          <img src="images/logo.png" alt=""></i>CodingNepal-->
+        </div>
+        <!--<div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>-->
+        <div class="navbar_content">
+          <i class="bx bx-grid"></i>
+   
+          <i class='bx bx-bell' ></i>
+          <img src="images/Persona10.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+      <h1>Información en el perfil</h1>
+
+            <div class="compras" id="compras">
+                <h2 class="heading-1"> <i class='bx bx-cart-alt icon'> Historial de compras</i></h2>
+                <style>
+                    /* Estilos CSS */
+                    
+                    .Historial-ventas {
+                      max-width: 800px;
+                      margin: 0 auto;
+                    }
+                
+                    .historial-ventas h1 {
+                      text-align: center;
+                    }
+                
+                    .historial-ventas table {
+                      width: 100%;
+                      border-collapse: collapse;
+                      overflow-x: auto;
+                      margin: auto;
+                    }
+                
+                    .Historial-ventas tr, th, td {
+                      padding: 8px;
+                      text-align: left;
+                      border-bottom: 1px solid #c7a17a;
+                    }
+                
+                    
+                    button{
+                      margin-top: 20px;
+                      padding: 10px;
+                      background-color:  #c7a17a;
+                      border: none;
+                      border-radius: 5px;
+
+                    }
+                  </style>
+                <div class="Historial-ventas">
+                    <h1>Historial de Compras</h1>
+                    <div style="overflow-x: auto;">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Aquí se insertarán dinámicamente los datos del historial -->
+                          <tr>
+                            <td>2023-06-01</td>
+                            <td>Anillo de Plata</td>
+                            <td>2</td>
+                            <td>50</td>
+                            <td>100</td>
+                          </tr>
+                          <tr>
+                            <td>2023-06-02</td>
+                            <td>Collar de Oro</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+                          <tr>
+                            <td>2023-06-03</td>
+                            <td>Pulsera de Diamantes</td>
+                            <td>3</td>
+                            <td>300</td>
+                            <td>900</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="btn-table">
+                      <button onclick="exportToPDF()">Exportar a PDF</button>
+                      <button onclick="exportToCSV()">Exportar a CSV</button>
+                    </div>
+                  </div>
+                  <script>
+                    // Función para exportar los datos a un archivo PDF
+                    function exportToPDF() {
+                      const doc = new jsPDF();
+                      const table = document.querySelector('.Historial-ventas table');
+                      doc.autoTable({ html: table });
+                      doc.save('historial_compras.pdf');
+                    }
+                
+                    // Función para exportar los datos a un archivo CSV
+                    function exportToCSV() {
+                      const table = document.querySelector('.Historial-ventas table');
+                      let csv = [];
+                      const rows = table.rows;
+                      for (let i = 0; i < rows.length; i++) {
+                        const row = rows[i];
+                        let rowData = [];
+                        for (let j = 0; j < row.cells.length; j++) {
+                          rowData.push(row.cells[j].textContent);
+                        }
+                        csv.push(rowData.join(','));
+                      }
+                      const csvContent = 'data:text/csv;charset=utf-8,' + csv.join('\n');
+                      const encodedUri = encodeURI(csvContent);
+                      const link = document.createElement('a');
+                      link.setAttribute('href', encodedUri);
+                      link.setAttribute('download', 'historial_compras.csv');
+                      document.body.appendChild(link);
+                      link.click();
+                    }
+                  </script>
+                
+            </div>
+
+            <div class="coments" id="coments">
+                <h2 class="heading-1"><i class='bx bx-detail icon' > Historial de comentarios</i></h2>
+                <section class="testimonios">
+                    <div class="wrapper--edit">
+                        <div class="box">
+                          <i class="fas fa-quote-left quote"></i>
+                          <p>La joyería de JoyasKogi es una obra de arte. Me encanta cómo combinan los elementos naturales con las hojas metalizadas para crear diseños únicos y hermosos. Además, poder personalizar mis joyas hace que sean aún más especiales. Si buscas piezas únicas y de calidad, definitivamente deberías echar un vistazo a JoyasKogi</p>
+                          <div class="content">
+                            <div class="info">
+                              <div class="name">Daniel Ramirez</div>
+                              <div class="job">Artista | Pintor</div>
+                              <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </div>
+                            </div>
+                            <div class="image">
+                              <img src="images/Persona10.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <i class="fas fa-quote-left quote"></i>
+                          <p>Estoy enamorada de mis joyas de la joyeria JoyasKogi. El hecho de que utilicen materiales naturales y hojas metalizadas les da un encanto único. Cada pieza es verdaderamente especial y refleja mi estilo y personalidad. ¡Recomendaría JoyasKogi a cualquiera que busque joyería artesanal y personalizada!</p>
+                          <div class="content">
+                            <div class="info">
+                                <div class="name">Daniel Ramirez</div>
+                                <div class="job">Artista | Pintor</div>
+                              <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </div>
+                            </div>
+                            <div class="image">
+                              <img src="images/Persona10.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box">
+                          <i class="fas fa-quote-left  quote"></i>
+                          <p>JoyasKogi es mi tienda de joyería favorita. Su enfoque en los materiales naturales y las hojas metalizadas realmente las distingue de otras joyerías. Poder personalizar mis joyas me permite expresar mi estilo único. La calidad y la atención al detalle en cada pieza son increíbles. ¡No puedo tener suficiente de las joyas de JoyasKogi!</p>
+                          <div class="content">
+                            <div class="info">
+                                <div class="name">Daniel Ramirez</div>
+                                <div class="job">Artista | Pintor</div>
+                              <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                              </div>
+                            </div>
+                            <div class="image">
+                              <img src="images/Persona10.jpg" alt="">
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                </section>
+            </div>
+
+            <div class="garantias" id="garantias">
+                <h2 class="heading-1"><i class='bx bx-calendar icon'> Calendario de garantias</i></h2>
+
+                <div id="month-selector">
+                    <select id="month-dropdown"></select>
+                    <button id="go-button">Ir</button>
+                </div>
+                <div id="calendar"></div>
+            
+
+
+                <script src="java/calender.js"></script>
+            </div>
+
+            <div class="joya" id="joya">
+                <h2 class="heading-1"><i class='bx bx-edit-alt icon' > Personaliza tu joya</i></h2>
+                <section class="container--modific">
+                    <header>Personaliza tu joya</header>
+                    <form action="#" class="form">
+                       
+                      <div class="input-box">
+                        <label>Tipo de joya</label>
+                        <input type="text" placeholder="Ingrese el tipo de joya" required />
+                      </div>
+                      <div class="input-box">
+                        <label>Ingrese el tamaño en CM </label>
+                        <input type="number" placeholder="Ingrese el tamaño" required />
+                      </div>
+                      <div class="column">
+                        <div class="input-box">
+                          <label>Ingrese material extra </label>
+                          <input type="number" placeholder="Ingrese el material que desee agregar" required />
+                        </div>
+                        <div class="input-box">
+                          <label>Ingrese su dirección</label>
+                          <input type="text" placeholder="Enter birth date" required />
+                        </div>
+                      </div>
+                      <div class="gender-box">
+                        <h3>Tipo de metal</h3>
+                        <div class="column">
+                            <div class="select-box">
+                              <select>
+                                <option hidden>Selecciona</option>
+                                <option>oro</option>
+                                <option>plata</option>
+                                <option>cobre</option>
+                                <option>platino</option>
+                                <option>aluminio</option>
+                              </select>
+                            </div>
+                      </div>
+                      <div class="input-box address">
+                        <label>Tipo de piedra</label>
+                        <div class="column">
+                          <div class="select-box">
+                            <select>
+                              <option hidden>Selecciona</option>
+                              <option>Esmeralda</option>
+                              <option>Diamante</option>
+                              <option>Rubi</option>
+                              <option>zafiros</option>
+                              <option>Rubi</option>
+                              <option>Perla</option>
+                            </select>
+                          </div>
+                          <input type="text" placeholder="Ingrese una descripción" required />
+                        </div>
+                        <div class="column">
+                          <input type="file" placeholder="Ingrese una imagen descriptiva" required />
+                       
+                        </div>
+                      </div>
+                      <button id="Alerta">Guardar personalización</button>
+                      <script> 
+                        window.addEventListener("load", function() { 
+                          document.getElementById("Alerta").addEventListener("click",function (){
+      
+                      alert('Se han guardado correctamente los datos!');  })
+                      
+                      }) 
+                      </script>
+                    </form>
+                  </section>
+            </div>
+
+            <div class="cita" id="cita">
+                <h2 class="heading-1"><i class='bx bx-calendar-plus icon' > Agenda una cita</i></h2>
+                <div class="container">
+                    <div class="title">Agenda tu cita</div>
+                    <div class="content">
+                      <form action="#">
+                        <div class="user-details">
+                          <div class="input-box">
+                            <span class="details">Nombre completo</span>
+                            <input type="text" placeholder="Ingrese su nombre completo" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Tipo de joya</span>
+                            <input type="text" placeholder="ingrese el tipo de joya " required>
+                          </div>
+                        
+                          <div class="input-box">
+                            <span class="details">Email</span>
+                            <input type="text" placeholder="Ingrese su email" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Numero de teléfono</span>
+                            <input type="text" placeholder="Ingrese su numero de telefono" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Fecha en que desea la cita</span>
+                            <input type="Date" placeholder="Ingrese la fecha" required>
+                          </div>
+                          <div class="input-box">
+                            <span class="details">Hora en que desa la cita</span>
+                            <input type="time" placeholder="Ingrese la hora" required>
+                          </div>
+                        </div>
+                        <div class="gender-details">
+                          <input type="radio" name="gender" id="dot-1">
+                          <input type="radio" name="gender" id="dot-2">
+                          <input type="radio" name="gender" id="dot-3">
+                          <span class="gender-title">Tipo de servicio</span>
+                          <div class="category">
+                            <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">Limpieza</span>
+                          </label>
+                          <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">Mantenimiento</span>
+                          </label>
+                          <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">Reparación</span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="button">
+                          <input type="submit" id="Alert" value="Agendar cita">
+                          <script> 
+                            window.addEventListener("load", function() { 
+                              document.getElementById("Alert").addEventListener("click",function (){
+          
+                          alert('Se ha agendado tu cita!');  })
+                          
+                          }) 
+                          </script>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="profil" id="profil">
+               <h2 class="heading-1"> <i class='bx bx-cog icon' > Edita los datos de tu perfil </i></h2>
+               <div class="container--profile">
+                <div class="text">Edita tus datos</div>
+                <form action="#">
+                   <div class="form-row">
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Nombre</label>
+                      </div>
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Apellido</label>
+                      </div>
+                   </div>
+                   <div class="form-row">
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Email</label>
+                      </div>
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Numero de telefono</label>
+                      </div>
+                   </div>
+                   <div class="form-row">
+                      <div class="input-data textarea">
+                         <textarea rows="8" cols="80" required></textarea>
+                         <br/>
+                         <div class="underline"></div>
+                         <label for="">Dirección</label>
+                         <br/>
+                         <div class="form-row submit-btn">
+                            <div class="input-data">
+                               <div class="inner"></div>
+                               <input type="submit" id="VerAl" value="Guardar cambios">
+                               <script> 
+                                window.addEventListener("load", function() { 
+                                  document.getElementById("VerAl").addEventListener("click",function (){
+              
+                              alert('Se han guardado los cambios!');  })
+                              
+                              }) 
+                              </script>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </form>
+             </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Modo claro";
+    }else{
+        modeText.innerText = "Modo oscuro";
+        
+    }
+});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,521 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/fav.css">
+    <link rel="stylesheet" href="css/contact.css">
+     
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.3/jspdf.umd.min.js"></script>
+    <title>JoyasKogi Admin</title>
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+               <img src="images/Logo.jpg" alt="">
+            </div>
+            <span class="logo_name">JoyasKogi</span>
+        </div>
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#dash-content">
+                    <i class="uil uil-estate"></i>
+                    <span class="link-name">Actividad usuarios</span>
+                </a></li>
+                <li><a href="#colecciones">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Colecciones</span>
+                </a></li>
+                <li><a href="#report">
+                    <i class="uil uil-chart"></i>
+                    <span class="link-name">Reportes</span>
+                </a></li>
+                <li><a href="#favoritos">
+                    <i class="uil uil-thumbs-up"></i>
+                    <span class="link-name">Favoritos</span>
+                </a></li>
+                <li><a href="#contactanos">
+                    <i class="uil uil-comments"></i>
+                    <span class="link-name">Contactanos</span>
+                </a></li>
+                <li><a href="#tienda">
+                    <i class="uil uil-shop"></i>
+                    <span class="link-name">Tienda</span>
+                </a></li>
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="Sesión.html" id="Alerview">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Cerrar sesión</span>
+                </a></li>
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Modo oscuro</span>
+                </a>
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+            <script> 
+                window.addEventListener("load", function() { 
+                  document.getElementById("Alerview").addEventListener("click",function (){
+
+              alert('Se ha cerrado sesión correctamente!');  })
+              
+              }) 
+              </script>
+        </div>
+    </nav>
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Busque aqui...">
+            </div>
+            
+        <img src="images/Persona4.jpg" alt="">
+        </div>
+        <div class="dash-content" id="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-tachometer-fast-alt"></i>
+                    <span class="text">Actividad de usuarios</span>
+                </div>
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="uil uil-users-alt"></i>
+                        <span class="text">Total usuarios</span>
+                        <span class="number">50,120</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="uil uil-comments"></i>
+                        <span class="text">Opiniones</span>
+                        <span class="number">20,120</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="uil uil-shopping-cart-alt"></i>
+                        <span class="text">Compras mensuales</span>
+                        <span class="number">10,120</span>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="title">
+                    <i class="uil uil-clock-three"></i>
+                    <span class="text">Actividad reciente</span>
+                </div>
+                <div class="activity-data">
+                    <div class="data names">
+                        <span class="data-title">Nombre</span>
+                        <span class="data-list">Prem Shahi</span>
+                        <span class="data-list">Deepa Chand</span>
+                        <span class="data-list">Manisha Chand</span>
+                        <span class="data-list">Pratima Shahi</span>
+                        <span class="data-list">Man Shahi</span>
+                        <span class="data-list">Ganesh Chand</span>
+                        <span class="data-list">Bikash Chand</span>
+                    </div>
+                    <div class="data email">
+                        <span class="data-title">Email</span>
+                        <span class="data-list">premshahi@gmail.com</span>
+                        <span class="data-list">deepachand@gmail.com</span>
+                        <span class="data-list">prakashhai@gmail.com</span>
+                        <span class="data-list">manishachand@gmail.com</span>
+                        <span class="data-list">pratimashhai@gmail.com</span>
+                        <span class="data-list">manshahi@gmail.com</span>
+                        <span class="data-list">ganeshchand@gmail.com</span>
+                    </div>
+                    <div class="data joined">
+                        <span class="data-title">Registrado</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-15</span>
+                    </div>
+                    <div class="data type">
+                        <span class="data-title">Ultima compra</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-12</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-13</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-14</span>
+                        <span class="data-list">2022-02-15</span>
+                    </div>
+                    <div class="data status">
+                        <span class="data-title">Estado</span>
+                        <span class="data-list">Activo</span>
+                        <span class="data-list">Inactivo</span>
+                        <span class="data-list">Activo</span>
+                        <span class="data-list">Activo</span>
+                        <span class="data-list">Inactivo</span>
+                        <span class="data-list">Activo</span>
+                        <span class="data-list">Activo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<section class="colecciones">
+        <div class="dash-content" id="colecciones">
+            <div class="overview">
+                <div class="title">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="text">Colecciones</span>
+                </div>
+
+                <div class="wrapper">
+                    <header>Agregar nuevo producto</header>
+                    <form action="#">
+                      <div class="dbl-field">
+                        <div class="field">
+                          <input type="text" name="name" placeholder="Ingrese el nombre del producto">
+                          <i class='fas fa-user'></i>
+                        </div>
+                        <div class="field">
+                          <input type="radio" id="check-male" name="gender" checked />
+                          <label for="check-male">Otoño</label>
+                          <input type="radio" id="check-male" name="gender" checked />
+                          <label for="check-male">Verano</label>
+                          <input type="radio" id="check-male" name="gender" checked />
+                          <label for="check-male">Primavera</label>
+                          <input type="radio" id="check-male" name="gender" checked />
+                          <label for="check-male">Invierno</label>
+                        </div>
+                      </div>
+                      <div class="dbl-field">
+                        <div class="field">
+                          <input type="text" name="phone" placeholder="Ingrese el tipo">
+                          <i class='fas fa-phone-alt'></i>
+                        </div>
+                        <div class="field">
+                          <input type="text" name="website" placeholder="Ingrese el material">
+                          <i class='fas fa-globe'></i>
+                        </div>
+                        
+                      </div>
+                      <div class="dbl-field">
+                        <div class="field">
+                            <input type="price" name="website" placeholder="Ingrese el precio">
+                            <i class='fas fa-globe'></i>
+                          </div>
+                          <div class="field">
+                            <input type="text" name="website" placeholder="Ingrese el tiemo de garantia">
+                            <i class='fas fa-globe'></i>
+                          </div>
+                      </div>
+                      <div class="message">
+                        <textarea placeholder="Añada una descripción del producto" name="message"></textarea>
+                        <i class="material-icons"></i>
+                      </div>
+                      <div>
+                        <input type="file" name="website" placeholder="Ingrese una imagen del producto">
+                        <i class='fas fa-globe'></i>
+                      </div>
+                      
+                      <div class="button-area">
+                        <button type="submit">Añadir producto</button>
+                        <span></span>
+                      </div>
+                    </form>
+                  </div>
+                  <script src="java/colecciones.js"></script>
+                
+               
+            </div>
+        </div>
+</section>
+
+<section class="report">
+    <div class="dash-content" id="report">
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-analysis"></i>
+                <span class="text">Reporte de ventas</span>
+            </div>
+
+            <style>
+                /* Estilos CSS */
+            
+            
+                .report table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  overflow-x: auto;
+                }
+            
+                .report th, td {
+                  padding: 8px;
+                  text-align: left;
+                  border-bottom: 1px solid #ddd;
+                }
+            
+                .report button {
+                  margin-top: 20px;
+                }
+              </style>
+        
+            <h1>Reporte de Ventas - Joyería</h1>
+            <table>
+              <thead>
+                <tr>
+                  <th>Fecha</th>
+                  <th>Tipo de Joya</th>
+                  <th>Cantidad</th>
+                  <th>Precio</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Aquí se insertarán dinámicamente los datos de las ventas -->
+              </tbody>
+            </table>
+            <div>
+              <button onclick="exportToPDF()">Exportar a PDF</button>
+              <button onclick="exportToCSV()">Exportar a CSV</button>
+            </div>
+            <script>
+              // Datos de ejemplo de ventas
+              const salesData = [
+                { fecha: '2023-06-01', tipoJoya: 'Anillo', cantidad: 5, precio: 100 },
+                { fecha: '2023-06-02', tipoJoya: 'Collar', cantidad: 3, precio: 150 },
+                { fecha: '2023-06-03', tipoJoya: 'Pulsera', cantidad: 2, precio: 200 },
+              ];
+        
+              // Función para generar la tabla de ventas
+              function generateSalesTable() {
+                const tableBody = document.querySelector('.report table tbody');
+        
+                salesData.forEach(sale => {
+                  const row = document.createElement('tr');
+                  row.innerHTML = `
+                    <td>${sale.fecha}</td>
+                    <td>${sale.tipoJoya}</td>
+                    <td>${sale.cantidad}</td>
+                    <td>${sale.precio}</td>
+                    <td>${sale.cantidad * sale.precio}</td>
+                  `;
+                  tableBody.appendChild(row);
+                });
+              }
+        
+              // Función para exportar los datos a un archivo PDF
+              function exportToPDF() {
+                const doc = new jsPDF();
+                const table = document.querySelector('.report table');
+                doc.autoTable({ html: table });
+                doc.save('reporte_ventas.pdf');
+              }
+        
+              // Función para exportar los datos a un archivo CSV
+              function exportToCSV() {
+                const table = document.querySelector('.report table');
+                let csv = [];
+                const rows = table.rows;
+                for (let i = 0; i < rows.length; i++) {
+                  const row = rows[i];
+                  let rowData = [];
+                  for (let j = 0; j < row.cells.length; j++) {
+                    rowData.push(row.cells[j].textContent);
+                  }
+                  csv.push(rowData.join(','));
+                }
+                const csvContent = 'data:text/csv;charset=utf-8,' + csv.join('\n');
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement('a');
+                link.setAttribute('href', encodedUri);
+                link.setAttribute('download', 'reporte_ventas.csv');
+                document.body.appendChild(link);
+                link.click();
+              }
+        
+              // Generar la tabla de ventas al cargar la página
+              window.addEventListener('load', generateSalesTable);
+            </script>
+           
+        </div>
+    </div>
+  
+   
+  </section>
+
+  <section class="favoritos">
+    <div class="dash-content" id="favoritos">
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="text">Articulos preferidos del mes</span>
+            </div>
+<div class="favs">
+            <div class="container swiper">
+                <div class="slide-container">
+                  <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="images\Orquideasdenuevo.png" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <img src="images/Verano.jpg" alt="" />
+                        <div class="name-job">
+                          <h3 class="name">Orquideas baño en oro</h3>
+                          <h4 class="job">Colección verano de 2022</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="images/Pulseradoradaotravez.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <img src="images/Verano.jpg" alt="" />
+                        <div class="name-job">
+                          <h3 class="name">Pulcera en oro dorada</h3>
+                          <h4 class="job">Coleccion verano de 2023</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="images/Anilloplateado.jpg" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <img src="images/Invierno.jpg" alt="" />
+                        <div class="name-job">
+                          <h3 class="name">Anillo de hoja recubierta en plata</h3>
+                          <h4 class="job">Colección invierno 2022</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="images/Caparazonarete.png" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <img src="images/Otoño.jpg" alt="" />
+                        <div class="name-job">
+                          <h3 class="name">Arete caparazon en oro</h3>
+                          <h4 class="job">Colección otoño 2023</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card swiper-slide">
+                      <div class="image-box">
+                        <img src="images/Collarsolido.png" alt="" />
+                      </div>
+                      <div class="profile-details">
+                        <img src="images/Otoño.jpg" alt="" />
+                        <div class="name-job">
+                          <h3 class="name">Collar de hoja solida en oro rosado </h3>
+                          <h4 class="job">Colección otoño 2023</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <script src="java/swiper-bundle.min.js"></script>
+              <script src="java/favs.js"></script>
+            </div>
+        </div>
+    </div>
+  
+   
+  </section>
+  <section class="Contactanos">
+    <div class="dash-content" id="contactanos">
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-thumbs-up"></i>
+                <span class="text">Datos del contactanos</span>
+            </div>
+            <div class="body-contact">
+            <section class="container--modific">
+                <header>Editar datos del contactanos</header>
+                <form action="#" class="form">
+                  
+                  <div class="input-box">
+                    <label>Email</label>
+                    <input type="text" placeholder="Ingresar email nuevo" required />
+                  </div>
+                  <div class="column">
+                    <div class="input-box">
+                      <label>Numero de telefono</label>
+                      <input type="number" placeholder="Ingresar numero de telefono" required />
+                    </div>
+                    <div class="input-box">
+                      <label>Numero de telefono dos</label>
+                      <input type="number" placeholder="Ingresa otro numero de telefono" required />
+                    </div>
+                  </div>
+                  <div class="input-box">
+                    <label>Dirección</label>
+                    <input type="text" placeholder="Ingresar dirección nueva" required />
+                  </div>
+
+                  <div class="input-box address">
+                    <label>Ciudad</label>
+                    <div class="column">
+                      <div class="select-box">
+                        <select>
+                          <option hidden>Selecciona</option>
+                          <option>Bogotá</option>
+                          <option>Medellin</option>
+                          <option>Barranquilla</option>
+                          <option>Cali</option>
+                        </select>
+                      </div>
+                      
+                    </div>
+                    
+                  </div>
+                  <button id="AlertaVer">Guardar</button>
+                  <script> 
+                    window.addEventListener("load", function() { 
+                      document.getElementById("AlertaVer").addEventListener("click",function (){
+  
+                  alert('Se han guardado los cambios!');  })
+                  
+                  }) 
+                  </script>
+                </form>
+              </section>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="tienda">
+
+<div class="dash-content" id="contactanos">
+        <div class="overview">
+            <div class="title">
+                <i class="uil uil-shop"></i>
+                <span class="text">Eliminar/editar tienda</span>
+            </div>
+           
+        </div>
+    </div>
+  </section>
+</section>
+
+    <script src="java/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <link rel="stylesheet" href="css/Profile.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Personaliza.css">
+    <link rel="stylesheet" href="css/citaP.css">
+    <link rel="stylesheet" href="css/perdit.css">
+    <link rel="stylesheet" href="css/Pendient.css">
+    <link rel="stylesheet" href="css/calender.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Joyas Kogi</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="images/Logo.jpg" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Joyas Kogi</span>
+                    <span class="profession">Naturaleza y joyas</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Buscar...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#ventas">
+                            <i class='bx bx-cart-alt icon' ></i>
+                            <span class="text nav-text">Historial de Ventas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#citas">
+                            <i class='bx bx-detail icon' ></i>
+                            <span class="text nav-text">Proximas citas</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#pedidos">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Calendario pedidos</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#profil">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Editar Perfil</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="Sesión.html" id="VerAlerta">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">cerrar sesión</span>
+                    </a>
+                    <script> 
+                        window.addEventListener("load", function() { 
+                          document.getElementById("VerAlerta").addEventListener("click",function (){
+      
+                      alert('Se ha cerrado sesión correctamente!');  })
+                      
+                      }) 
+                      </script>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo oscuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+       
+     <!-- navbar -->
+    <nav class="navbar">
+        <div class="logo_item">
+          <!--<i class="bx bx-menu" id="sidebarOpen"></i>
+          <img src="images/logo.png" alt=""></i>CodingNepal-->
+        </div>
+        <!--<div class="search_bar">
+          <input type="text" placeholder="Search" />
+        </div>-->
+        <div class="navbar_content">
+          <i class="bx bx-grid"></i>
+   
+          <i class='bx bx-bell' ></i>
+          <img src="images/Persona10.jpg" alt="" class="profile" />
+        </div>
+      </nav>
+      <h1>Información en el perfil</h1>
+
+            <div class="ventas" id="ventas">
+                <h2 class="heading-1"> <i class='bx bx-cart-alt icon'> Historial de ventas</i></h2>
+                <style>
+                    /* Estilos CSS */
+                    
+                    .Historial-ventas {
+                      max-width: 800px;
+                      margin: 0 auto;
+                    }
+                
+                    .historial-ventas h1 {
+                      text-align: center;
+                    }
+                
+                    .historial-ventas table {
+                      width: 100%;
+                      border-collapse: collapse;
+                      overflow-x: auto;
+                      margin: auto;
+                    }
+                
+                    .Historial-ventas tr, th, td {
+                      padding: 8px;
+                      text-align: left;
+                      border-bottom: 1px solid #c7a17a;
+                    }
+                
+                    
+                    button{
+                      margin-top: 20px;
+                      padding: 10px;
+                      background-color:  #c7a17a;
+                      border: none;
+                      border-radius: 5px;
+
+                    }
+                  </style>
+                <div class="Historial-ventas">
+                    <h1>Historial de ventas</h1>
+                    <div style="overflow-x: auto;">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Fecha</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <!-- Aquí se insertarán dinámicamente los datos del historial -->
+                          <tr>
+                            <td>2023-06-01</td>
+                            <td>Anillo de Plata</td>
+                            <td>2</td>
+                            <td>50</td>
+                            <td>100</td>
+                          </tr>
+                          <tr>
+                            <td>2023-06-02</td>
+                            <td>Collar de Oro</td>
+                            <td>1</td>
+                            <td>200</td>
+                            <td>200</td>
+                          </tr>
+                          <tr>
+                            <td>2023-06-03</td>
+                            <td>Pulsera de Diamantes</td>
+                            <td>3</td>
+                            <td>300</td>
+                            <td>900</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <div class="btn-table">
+                      <button onclick="exportToPDF()">Exportar a PDF</button>
+                      <button onclick="exportToCSV()">Exportar a CSV</button>
+                    </div>
+                  </div>
+                  <script>
+                    // Función para exportar los datos a un archivo PDF
+                    function exportToPDF() {
+                      const doc = new jsPDF();
+                      const table = document.querySelector('.Historial-ventas table');
+                      doc.autoTable({ html: table });
+                      doc.save('historial_compras.pdf');
+                    }
+                
+                    // Función para exportar los datos a un archivo CSV
+                    function exportToCSV() {
+                      const table = document.querySelector('.Historial-ventas table');
+                      let csv = [];
+                      const rows = table.rows;
+                      for (let i = 0; i < rows.length; i++) {
+                        const row = rows[i];
+                        let rowData = [];
+                        for (let j = 0; j < row.cells.length; j++) {
+                          rowData.push(row.cells[j].textContent);
+                        }
+                        csv.push(rowData.join(','));
+                      }
+                      const csvContent = 'data:text/csv;charset=utf-8,' + csv.join('\n');
+                      const encodedUri = encodeURI(csvContent);
+                      const link = document.createElement('a');
+                      link.setAttribute('href', encodedUri);
+                      link.setAttribute('download', 'historial_compras.csv');
+                      document.body.appendChild(link);
+                      link.click();
+                    }
+                  </script>
+                
+            </div>
+
+            <div class="citas" id="citas">
+        
+                <h2 class="heading-1"><i class='bx bx-detail icon' >Citas por confirmar</i></h2>
+                <section class="main">
+                    <div class="profile-card">
+                      <div class="image">
+                    <img src="images/Persona8.jpg" alt="" class="profile-pic">
+                      </div>
+                      <div class="data">
+                        <h2>Olivia Gomez</h2>
+                        <span>olivia@gmail.com</span>
+                      </div>
+                      <div class="row">
+                        <div class="info">
+                          <h3>Fecha</h3>
+                          <span>21-06</span>
+                        </div>
+                        <div class="info">
+                          <h3>Hora</h3>
+                          <span>11:00 am</span>
+                        </div>
+                        <div class="info">
+                          <h3>Servicio</h3>
+                          <span>Limpieza</span>
+                        </div>
+                      </div>
+                      <div class="buttons">
+                        <a href="#" class="btn">Aceptar</a>
+                        <a href="#" class="btn">Rechazar</a>
+                      </div>
+                    </div>
+                  </section>
+            </div>
+
+            <div class="garantias" id="pedidos">
+                <h2 class="heading-1"><i class='bx bx-calendar icon'> Calendario de pedidos</i></h2>
+
+
+                <div id="month-selector">
+                    <select id="month-dropdown"></select>
+                    <button id="go-button">Ir</button>
+                </div>
+                <div id="calendar"></div>
+            
+                <script src="java/calender.js"></script>
+            </div>
+
+
+            <div class="profil" id="profil">
+               <h2 class="heading-1"> <i class='bx bx-cog icon' > Edita los datos de tu perfil </i></h2>
+               <div class="container--profile">
+                <div class="text">Edita tus datos</div>
+                <form action="#">
+                   <div class="form-row">
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Nombre</label>
+                      </div>
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Apellido</label>
+                      </div>
+                   </div>
+                   <div class="form-row">
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Email</label>
+                      </div>
+                      <div class="input-data">
+                         <input type="text" required>
+                         <div class="underline"></div>
+                         <label for="">Numero de telefono</label>
+                      </div>
+                   </div>
+                   <div class="form-row">
+                      <div class="input-data textarea">
+                         <textarea rows="8" cols="80" required></textarea>
+                         <br/>
+                         <div class="underline"></div>
+                         <label for="">Dirección</label>
+                         <br/>
+                         <div class="form-row submit-btn">
+                            <div class="input-data">
+                               <div class="inner"></div>
+                               <input type="submit" id="VerAl" value="Guardar cambios">
+                               <script> 
+                                window.addEventListener("load", function() { 
+                                  document.getElementById("VerAl").addEventListener("click",function (){
+              
+                              alert('Se han guardado los cambios!');  })
+                              
+                              }) 
+                              </script>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </form>
+             </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Modo claro";
+    }else{
+        modeText.innerText = "Modo oscuro";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
